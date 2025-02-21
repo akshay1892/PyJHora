@@ -43,7 +43,9 @@ _world_city_db_df = []
 world_cities_db = []
 google_maps_url = "https://www.google.cl/maps/place/"#+' time zone'
 _world_city_db_df = pd.read_csv(const._world_city_csv_file,header=None,encoding='ISO-8859-1') #encoding='utf-8')
-world_cities_db = np.array(_world_city_db_df.loc[:].values.tolist())
+# world_cities_db = np.array(_world_city_db_df.loc[:].values.tolist())
+world_cities_db = _world_city_db_df.to_numpy()
+
 world_cities_list = _world_city_db_df[1].tolist()
 
 sort_tuple = lambda tup,tup_index,reverse=False: sorted(tup,key = lambda x: x[tup_index],reverse=reverse)

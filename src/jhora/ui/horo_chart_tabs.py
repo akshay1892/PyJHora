@@ -20,6 +20,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 import re, sys, os
 sys.path.append('../')
+sys.path.append(os.path.abspath('../jhora'))
 """ Get Package Version from _package_info.py """
 #import importlib.metadata
 #_APP_VERSION = importlib.metadata.version('PyJHora')
@@ -5578,7 +5579,7 @@ if __name__ == "__main__":
     sys.excepthook = except_hook
     App = QApplication(sys.argv)
     chart = ChartTabbed()
-    chart.language('Tamil')
+    chart.language('English')
     """
     chart.name('XXX')#'('Rama')
     chart.gender(1) #(0)

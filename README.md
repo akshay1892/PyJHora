@@ -18,6 +18,10 @@ There is a test module (`jhora.tests.pvr_tests`) containing about 6300 tests tha
 
 Having said that, if you find this package useful, all the credits go to Shri. P.V.R Narasimha Rao for such a wonderful book and the software and to the other internet sources.
 
+### To run 
+ 1. cd to G:\Workspace\PyJHora\src\jhora
+ 2. python ui\horo_chart_tabs.py
+
 Installation Requirements
 -------------------------
 This package is available in pypi.org
@@ -453,7 +457,8 @@ jhora
 ```
 Changes since 4.3.5
 ===================
-Refactored `utils` by removing global variables replaced with `setattr`
+Refactored `utils` by removing global variables replaced with `setattr`
+
 Added Vedic Calendar Widget
 
 More ways of calculating `tamil_month_and_date` added. Default can be chosen from `const.tamil_month_method`

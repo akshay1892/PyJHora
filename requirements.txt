@@ -1,12 +1,12 @@
 attr==0.3.2
-conda==4.3.16
+# conda==4.3.16
 geocoder==1.38.1
 geopy==2.4.1
 img2pdf==0.5.1
-numpy==2.2.0
+numpy
 pandas==2.2.3
 Pillow==11.0.0
-pyephem==4.1.6
+pyephem
 PyQt6==6.8.0
 PyQt6_sip==13.8.0
 pyqtgraph==0.13.7

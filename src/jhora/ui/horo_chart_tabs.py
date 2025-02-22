@@ -2628,7 +2628,10 @@ class ChartTabbed(QWidget):
         user_age = min(datetime.now().year - birth_date.year, const.annual_maximum_age) + 1
         dob = (int(year),int(month),int(day))
         tob = tuple([int(x) for x in self._tob_text.text().split(':')])
+        print('*DOB', dob)
+        print('*TOB', tob)
         self._birth_julian_day = utils.julian_day_number(dob, tob)
+        print('*Julian Day', self._birth_julian_day)
         place = drik.Place(self._place_text.text(),float(self._lat_text.text()),float(self._long_text.text()),float(self._tz_text.text()))
         self._years_combo.setValue(1); self._60hrs_combo.setValue(1); self._months_combo.setValue(1)
         self._years_combo.setEnabled(False); self._months_combo.setEnabled(False); self._60hrs_combo.setEnabled(False)
@@ -4963,6 +4966,7 @@ class ChartTabbed(QWidget):
         #jd = self._horo.julian_day  # For ascendant and planetary positions, dasa bukthi - use birth time
         jd = self._birth_julian_day
         place = drik.Place(self._place_name,float(self._latitude),float(self._longitude),float(self._time_zone))
+        print('**Input Params:',jd,place,available_languages[self._language])
         self._prediction_results = general.get_prediction_details(jd,place,language=available_languages[self._language])
         self._prediction_list.clear()
         self._prediction_count = len(self._prediction_results)
